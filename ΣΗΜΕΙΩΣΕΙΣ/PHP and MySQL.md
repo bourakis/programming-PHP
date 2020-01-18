@@ -191,3 +191,46 @@ mysqli_close($conn);
 Χρησιμοποιώντας την ετικέτα `<input>` δημιουργούμε τα πεδία της φόρμας που θα εισαχθούν τα δεδομένα. Στο `type` δηλώνουμε τον τύπο της `input` που στην συγκεκριμένη περίπτωση είναι `text`. Θα μπορούσε να είναι `checkbox`, `radio`, `button` κλπ. Η παράμετρος `name` είναι πολύ σημαντική καθώς κατά την αποστολή των δεδομένων της φόρμας θα τα λάβει η php δηλώνοντας την `name`. Θα δούμε στο βήμα 2 ακριβώς πώς γίνεται.
 
 
+### Βήμα 2
+Ο παρακάτω κώδικας είναι η insert.php. Η insert.php  λαμβάνει τα δεδομένα από την φόρμα της HTML (form.php), συνδέεται στην βάση δεδομένων και αποθηκεύει τα δεδομένα της φόρμας.
+
+`Όνομα αρχείου: insert.php`
+```php
+<?php
+/* Δημιουργία νέας σύνδεσης */
+$conn = mysqli_connect("localhost", "root", "", "School");
+
+// Έλεγχος σύνδεσης
+if($conn === false)
+{
+  die("ERROR: Could not connect. " . mysqli_connect_error());
+}
+
+// Έλεγχος εισόδου δεδομένων για ασφάλεια.
+$first_name = mysqli_real_escape_string($link, $_REQUEST['first_name']);
+$last_name  = mysqli_real_escape_string($link, $_REQUEST['last_name']);
+
+
+// Δήλωση sql query για εισαγωγή δεδομένων.
+$sql = "INSERT INTO students (firstname, lastname) 
+        VALUES ('$first_name', '$last_name')";
+
+// Έλεγχος εαν το query εκτελέσθηκε επιτυχώς.
+if(mysqli_query($conn, $sql))
+{
+  echo "Records added successfully.";
+} 
+else
+{
+  echo "ERROR: Could not able to execute $sql. ";
+  mysqli_error($conn);
+}
+
+// Κλείσιμο σύνδεσης
+mysqli_close($conn);
+?>
+```
+
+Η εντολή `mysqli_real_escape_string()` χρησιμοποιείται για να ελέγχει και να απορρίπτει ειδικούς χαρακτήρες που ενδέχεται να δημιουργήσουν πρόβλημα ασφάλειας στο πρόγραμμά μας τύπου sql injection.  
+
+Την `$_REQUEST` την χρησιμοποιούμε για να λάβουμε τα δεδομένα από την φόρμα. Στην συγκεκριμένη περίπτωση για να λάβουμε το περιεχόμενο του πεδίου της φόρμας μας με όνομα `first_name`, δηλώνουμε στην PHP `$_REQUEST['first_name']` και αποθηκεύουμε το περιεχόμενο στην μεταβλητή `$first_name`.
