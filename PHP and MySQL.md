@@ -1,9 +1,9 @@
-# Σύνδεση της php με τον MySQL Server
+# Σύνδεση της PHP με τον MySQL Server
 > Σημείωση: Για να συνεχίσετε σε αυτό το κεφάλαιο, θα πρέπει πρώτα να έχετε διαβάσει τις σημειώσεις "Εισαγωγή στην MySQL". 
 
 Στο παρακάτω παράδειγμα βλέπουμε πώς μπορούμε να συνδεθούμε στον τοπικό mysql server που τρέχει στο μηχάνημά μας.
 
-```php {.line-numbers}
+```php 
 <?php
 $servername = "localhost";
 $username = "username";
@@ -64,6 +64,16 @@ INSERT INTO students (firstname, lastname)
 VALUES ('Peter', 'Parker')
 ```
 
+Σε περίπτωση όμως που θέλουμε να εισάγουμε πολλαπλά δεδομένα με ένα query, τότε η `INSERT` μπορεί να συνταχθεί και έτσι:
+
+```mysql
+INSERT INTO persons (first_name, last_name) 
+VALUES ('John', 'Rambo'),
+       ('Clark', 'Kent'),
+       ('John', 'Carter'),
+       ('Harry', 'Potter');
+```
+
 Στην PHP, η εισαγωγή μιας εγγραφής πραγματοποιείται με τον παρακάτω κώδικα:
 
 ```php
@@ -97,5 +107,47 @@ mysqli_close($conn);
 ?>
 ```
 
+## Θέτοντας ένα SQL ερώτημα με την SELECT
+
+Στο προηγούμενο παράδειγμα εισάγαμε κάποια δεδομένα στην βάση μας. Στο παρακάτω παράδειγμα θα θέσουμε ένα sql ερώτημα με σκοπό να εμφανίσουμε τα δεδομένα που έχουμε εισάγει στην βάση μας. 
+
+```php
+<?php
+$servername = "localhost";
+$username = "root";
+$password = "";
+$dbname = "School";
 
 
+// Δημιουργία νέας σύνδεσης
+$conn = mysqli_connect($servername, $username, $password, $dbname);
+
+
+// Έλεγχος σύνδεσης
+if (!$conn) 
+{
+  die("Connection failed: " . mysqli_connect_error());
+}
+
+
+$sql = "SELECT id, firstname, lastname FROM students";
+$result = mysqli_query($conn, $sql);
+
+
+if (mysqli_num_rows($result) > 0) 
+{
+  // Εξαγωγή δεδομένων για κάθε εγγραφή
+  while($row = mysqli_fetch_assoc($result))   
+  {
+    echo "id: " . $row["id"]. " - Name: " . $row["firstname"]. " " . $row["lastname"]. "<br>";
+  }
+} 
+else 
+{
+  echo "0 results";
+}
+
+
+mysqli_close($conn);
+?>
+```
