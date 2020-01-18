@@ -57,13 +57,45 @@ ALTER TABLE `students`
 
 
 ## Εισάγοντας δεδομένα στην Βάση Δεδομένων
-Εφόσον δημιουργήσαμε την βάση δεδομένων με όνομα **School** και το table **students** με τα πεδία `id`, `firstname` και `lastname`, θα δούμε το sql query που εισάγουμε δεδομένα στον πίνακα χρησιμοποιώντας την `INSERT`. Συγκεκριμένα, θα εισάγουμε την εγγραφή Peter Parker στα πεδία firstname και lastname αντίστοιχα. 
+Εφόσον δημιουργήσαμε την βάση δεδομένων με όνομα **School** και το table **students** με τα πεδία `id`, `firstname` και `lastname`, θα δούμε το sql query που εισάγουμε δεδομένα στον πίνακα χρησιμοποιώντας την `INSERT`. Συγκεκριμένα, θα εισάγουμε την εγγραφή Peter Parker στα πεδία `firstname` και `lastname` αντίστοιχα. 
 
 ```mysql
 INSERT INTO students (firstname, lastname) 
 VALUES ('Peter', 'Parker')
 ```
 
+Στην PHP, η εισαγωγή μιας εγγραφής πραγματοποιείται με τον παρακάτω κώδικα:
+
+```php
+<?php
+/* Προσπάθεια σύνδεσης στον MySQL Server. Υποθέτουμε οτι
+Τα default settings είναι (user 'root' with no password) */
+$conn = mysqli_connect("localhost", "root", "", "School");
+ 
+// Έλεγχος σύνδεσης
+if($conn === false)
+{
+    die("ERROR: Could not connect. " . mysqli_connect_error());
+}
+ 
+// Το sql query που θα εισάγει την νέα εγγραφή.
+$sql = "INSERT INTO students (firstname, lastname) 
+        VALUES ('Peter', 'Parker')";
+
+// Εκτέλεση του sql query. 
+if(mysqli_query($conn, $sql))
+{
+    echo "Records inserted successfully.";
+} 
+else
+{
+    echo "ERROR: Could not able to execute $sql. " . mysqli_error($link);
+}
+ 
+// Κλείσιμο σύνδεσης 
+mysqli_close($conn);
+?>
+```
 
 
 
