@@ -30,3 +30,29 @@ else
 Συγκεκριμένα, η `mysqli_connect()` επιχειρεί να συνδεθεί στον mysql server. Εαν είναι επιτυχημένη η σύνδεση, 
 τότε επιστρέφει ένα object στην `$conn` με τα στοιχεία της σύνδεσης. Διαφορετικά, αν αποτύχει να συνδεθεί, τότε επιστρέφει 
 την τιμή `FALSE`.
+
+Στη συνέχεια, ελέγχουμε αν η σύνδεσή μας στην mysql είναι επιτυχής μέσω της $conn. Εαν είναι επιτυχής, εμφανίζεται το μήνυμα “Connected successfully”, διαφορετικά εμφανίζεται το μήνυμα “Connection failed: ”. Η function `mysqli_connect_error()` επιστρέφει το μήνυμα λάθους που επέστρεψε η mysql σε περίπτωση που η απόπειρα σύνδεσης ήταν αποτυχημένη.
+
+## Δημιουργώντας μια Βάση Δεδομένων
+
+
+## Εισάγοντας δεδομένα στην Βάση Δεδομένων
+Στο παρακάτω παράδειγμα θα χρησιμοποιήσουμε μια βάση δεδομένων με όνομα **School**. Το table που θα χρησιμοποιηθεί θα είναι ο **students** το οποίο θα διαθέτει τρία πεδία. Το `id`, `firstname` και `lastname`. Παρακάτω παρουσιάζεται αναλυτικά το sql query του table students.
+
+```mysql
+CREATE TABLE `students` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `firstname` varchar(20) NOT NULL,
+  `lastname` varchar(20) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+```
+
+Στη συνέχεια εκτελώντας το παρακάτω παράδειγμα, θα εισαχθεί μια νέα εγγραφή στην βάση δεδομένων μας.
+
+```mysql
+INSERT INTO students (firstname, lastname) 
+VALUES ('Peter', 'Parker')
+```
+
+
+
