@@ -63,4 +63,10 @@ WAMPP -> http://www.wampserver.com/en/
 
 Στη συνέχεια, δημιουργούμε τον πίνακά μας με την εντολή `CREATE` συγκεκριμένα:
 
-
+```mysql
+CREATE TABLE `Students` (
+  `id` int(11) NOT NULL AUTO_INCREMENT PRIMARY KEY,
+  `email` varchar(20) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+```
+![alt text](https://raw.githubusercontent.com/addboo/programming-PHP/master/%CE%A3%CE%97%CE%9C%CE%95%CE%99%CE%A9%CE%A3%CE%95%CE%99%CE%A3/images/cmd_create_table.PNG "Command line")
