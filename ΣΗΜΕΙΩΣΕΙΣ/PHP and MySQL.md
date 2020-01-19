@@ -64,7 +64,7 @@ VALUES ('Peter', 'Parker')
 Σε περίπτωση όμως που θέλουμε να εισάγουμε πολλαπλά δεδομένα με ένα query, τότε η `INSERT` μπορεί να συνταχθεί και έτσι:
 
 ```mysql
-INSERT INTO persons (first_name, last_name) 
+INSERT INTO students (firstname, lastname) 
 VALUES ('John', 'Rambo'),
        ('Clark', 'Kent'),
        ('John', 'Carter'),
