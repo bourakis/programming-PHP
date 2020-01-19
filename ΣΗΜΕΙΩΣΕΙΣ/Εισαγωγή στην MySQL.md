@@ -38,7 +38,19 @@ WAMPP -> http://www.wampserver.com/en/
 
 `mysql -u root -p` 
 
-Όταν σας ζητηθεί κωδικός θα πατήσετε απλώς ENTER.
+Όταν σας ζητηθεί κωδικός θα πατήσετε απλώς ENTER και θα βρεθείτε στο παρακάτω περιβάλλον.
 
 ![alt text](https://raw.githubusercontent.com/addboo/programming-PHP/master/%CE%A3%CE%97%CE%9C%CE%95%CE%99%CE%A9%CE%A3%CE%95%CE%99%CE%A3/images/cmd_mysql.PNG "Command line")
 
+### Δημιουργία Βάσης Δεδομένων 
+Μέσω της κονσόλας, μπορούμε απευθείας με εντολές να δημιουργήσουμε μία βάση δεδομένων με το παρακάτω query
+
+`CREATE DATABASE myNewDB;`
+
+Στη συνέχεια για να δούμε αν όντως δημιουργήθηκε η Βάση Δεδομένων μας, πληκτρολογούμε την εντολή
+
+`SHOW DATABASES;`
+
+Το αποτέλεσμα φαίνεται στην παρακάτω εικόνα.
+
+![alt text](https://raw.githubusercontent.com/addboo/programming-PHP/master/%CE%A3%CE%97%CE%9C%CE%95%CE%99%CE%A9%CE%A3%CE%95%CE%99%CE%A3/images/cmd_createdb.PNG "Command line")
