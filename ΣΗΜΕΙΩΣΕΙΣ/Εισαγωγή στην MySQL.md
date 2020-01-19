@@ -43,7 +43,7 @@ WAMPP -> http://www.wampserver.com/en/
 ![alt text](https://raw.githubusercontent.com/addboo/programming-PHP/master/%CE%A3%CE%97%CE%9C%CE%95%CE%99%CE%A9%CE%A3%CE%95%CE%99%CE%A3/images/cmd_mysql.PNG "Command line")
 
 ### Δημιουργία Βάσης Δεδομένων 
-Μέσω της κονσόλας, μπορούμε απευθείας με εντολές να δημιουργήσουμε μία βάση δεδομένων με το παρακάτω query
+Μέσω της κονσόλας, μπορούμε απευθείας με εντολές να δημιουργήσουμε μία βάση δεδομένων με το παρακάτω query. Θα ονομάσουμε την Βάση μας myNewDB. Βέβαια, μπορείτε να χρησιμοποιήσετε ένα όνομα της επιλογής σας. 
 
 `CREATE DATABASE myNewDB;`
 
@@ -54,3 +54,13 @@ WAMPP -> http://www.wampserver.com/en/
 Το αποτέλεσμα φαίνεται στην παρακάτω εικόνα.
 
 ![alt text](https://raw.githubusercontent.com/addboo/programming-PHP/master/%CE%A3%CE%97%CE%9C%CE%95%CE%99%CE%A9%CE%A3%CE%95%CE%99%CE%A3/images/cmd_createdb.PNG "Command line")
+
+### Δημιουργία πίνακα
+
+Πριν δημιουργήσουμε τους πίνακες στην Βάση Δεδομένων μας, πρέπει πρώτα να ενημερώσουμε την mysql σε ποιά Βάση Δεδομένων θα εργαστούμε. Αυτό το δηλώνουμε με την εντολή:
+
+`USE myNewDB;`
+
+Στη συνέχεια, δημιουργούμε τον πίνακά μας με την εντολή `CREATE` συγκεκριμένα:
+
+
