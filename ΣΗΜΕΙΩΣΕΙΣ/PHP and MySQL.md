@@ -58,7 +58,7 @@ CREATE TABLE `students` (
 
 ```mysql
 INSERT INTO students (firstname, lastname) 
-VALUES ('Peter', 'Parker')
+VALUES ('Peter', 'Parker');
 ```
 
 Σε περίπτωση όμως που θέλουμε να εισάγουμε πολλαπλά δεδομένα με ένα query, τότε η `INSERT` μπορεί να συνταχθεί και έτσι:
