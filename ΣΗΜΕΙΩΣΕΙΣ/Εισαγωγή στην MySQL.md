@@ -78,3 +78,27 @@ CREATE TABLE `Students` (
 ![alt text](https://raw.githubusercontent.com/addboo/programming-PHP/master/%CE%A3%CE%97%CE%9C%CE%95%CE%99%CE%A9%CE%A3%CE%95%CE%99%CE%A3/images/cmd_describe.PNG "Command line")
 
 ### Δημιουργία νέας εγγραφής
+Εισάγουμε εγγραφές στον πίνακά μας με την εντολή `INSERT`. 
+
+```mysql
+INSERT INTO students (email) 
+VALUES ('bill@eti.edu.gr');
+```
+
+Σε περίπτωση όμως που θέλουμε να εισάγουμε πολλαπλά δεδομένα με ένα query, τότε η INSERT μπορεί να συνταχθεί και έτσι:
+
+```mysql
+INSERT INTO students (email) 
+VALUES ('bill@eti.edu.gr'),
+       ('steve@eti.edu.gr'),
+       ('nick@eti.edu.gr'),
+       ('john@eti.edu.gr');
+```
+
+Για να δούμε τα περιεχόμενα ενός πίνακα, χρησιμοποιούμε την εντολή `SELECT`. Τον αστερίσκο τον χρησιμοποιούμε για να επιλέξουμε όλα τα πεδία. Στην συγκεκριμένη περίπτωση όμως έχουμε μόνο ένα πεδίο, το email. Το αποτέλεσμα θα ήταν το ίδιο αν γράφαμε `SELECT email FROM Students;`.
+
+```mysql
+SELECT * FROM Students;
+```
+
+![alt text](https://raw.githubusercontent.com/addboo/programming-PHP/master/%CE%A3%CE%97%CE%9C%CE%95%CE%99%CE%A9%CE%A3%CE%95%CE%99%CE%A3/images/cmd_SELECT.PNG "Command line")
