@@ -70,3 +70,11 @@ CREATE TABLE `Students` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 ```
 ![alt text](https://raw.githubusercontent.com/addboo/programming-PHP/master/%CE%A3%CE%97%CE%9C%CE%95%CE%99%CE%A9%CE%A3%CE%95%CE%99%CE%A3/images/cmd_create_table.PNG "Command line")
+
+Εαν επιθυμούμε να δούμε την δομή ενός πίνακα, τότε αυτό επιτυγχάνεται με την εντολή `DESCRIBE`. 
+
+`DESCRIBE Students;`
+
+![alt text](https://raw.githubusercontent.com/addboo/programming-PHP/master/%CE%A3%CE%97%CE%9C%CE%95%CE%99%CE%A9%CE%A3%CE%95%CE%99%CE%A3/images/cmd_describe.PNG "Command line")
+
+### Δημιουργία νέας εγγραφής
