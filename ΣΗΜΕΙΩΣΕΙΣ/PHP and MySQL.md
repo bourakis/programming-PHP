@@ -277,7 +277,7 @@ mysqli_close($conn);
 $conn = mysqli_connect("localhost", "root", "", "School");
 
 / Εκτέλεση του SELECT query
-$sql = "SELECT * FROM persons";
+$sql = "SELECT * FROM Students";
 
 if($result = mysqli_query($conn, $sql))
 {
