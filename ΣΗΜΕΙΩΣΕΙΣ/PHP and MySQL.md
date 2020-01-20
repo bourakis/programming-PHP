@@ -160,7 +160,7 @@ mysqli_close($conn);
 ## Εισαγωγή δεδομένων απο μια HTML form
 Στο προηγούμενο παράδειγμα είδαμε πως εισάγουμε δεδομένα στην βάση μας απευθείας απο την php χρησιμοποιώντας την `INSERT`. Σε αυτό το παράδειγμα, θα δούμε πώς μπορούμε να εισάγουμε δεδομένα από μια φόρμα HTML, δηλαδή μέσα απο την ιστοσελίδα μας.
 
-### Βήμα 1
+### Βήμα 1: Δημιουργία της φόρμας
 Χρησιμοποιώντας HTML δημιουργούμε την ιστοσελίδα και την φόρμα που θα δηλωθούν τα δεδομένα.
 
 `Όνομα αρχείου: form.php`
@@ -196,8 +196,8 @@ mysqli_close($conn);
 Χρησιμοποιώντας την ετικέτα `<input>` δημιουργούμε τα πεδία της φόρμας που θα εισαχθούν τα δεδομένα. Στο `type` δηλώνουμε τον τύπο της `input` που στην συγκεκριμένη περίπτωση είναι `text`. Θα μπορούσε να είναι `checkbox`, `radio`, `button` κλπ. Η παράμετρος `name` είναι πολύ σημαντική καθώς κατά την αποστολή των δεδομένων της φόρμας θα τα λάβει η php δηλώνοντας την `name`. Θα δούμε στο βήμα 2 ακριβώς πώς γίνεται.
 
 
-### Βήμα 2
-Ο παρακάτω κώδικας είναι η insert.php. Η insert.php  λαμβάνει τα δεδομένα από την φόρμα της HTML (form.php), συνδέεται στην βάση δεδομένων και αποθηκεύει τα δεδομένα της φόρμας.
+### Βήμα 2: Εισαγωγή δεδομένων στην mysql
+Ο παρακάτω κώδικας είναι η insert.php. Η insert.php λαμβάνει τα δεδομένα από την φόρμα της HTML (form.php), συνδέεται στην βάση δεδομένων και αποθηκεύει τα δεδομένα της φόρμας εκεί.
 
 `Όνομα αρχείου: insert.php`
 ```php
@@ -212,8 +212,8 @@ if($conn === false)
 }
 
 // Έλεγχος εισόδου δεδομένων για ασφάλεια.
-$first_name = mysqli_real_escape_string($link, $_REQUEST['first_name']);
-$last_name  = mysqli_real_escape_string($link, $_REQUEST['last_name']);
+$first_name = mysqli_real_escape_string($conn, $_REQUEST['first_name']);
+$last_name  = mysqli_real_escape_string($conn, $_REQUEST['last_name']);
 
 
 // Δήλωση sql query για εισαγωγή δεδομένων.
@@ -239,6 +239,36 @@ mysqli_close($conn);
 Η εντολή `mysqli_real_escape_string()` χρησιμοποιείται για να ελέγχει και να απορρίπτει ειδικούς χαρακτήρες που ενδέχεται να δημιουργήσουν πρόβλημα ασφάλειας στο πρόγραμμά μας τύπου sql injection.  
 
 Την `$_REQUEST` την χρησιμοποιούμε για να λάβουμε τα δεδομένα από την φόρμα. Στην συγκεκριμένη περίπτωση για να λάβουμε το περιεχόμενο του πεδίου της φόρμας μας με όνομα `first_name`, δηλώνουμε στην PHP `$_REQUEST['first_name']` και αποθηκεύουμε το περιεχόμενο στην μεταβλητή `$first_name`.
+
+### Βήμα 3: Εμφάνιση όλων των δεδομένων
+Για να εμφανίσουμε τα δεδομένα του πίνακά μας (Students) στην ιστοσελίδα μας, θα πρέπει να χρησιμοποιήσουμε την εντολή `SELECT` της mysql.
+
+`Όνομα αρχείου: list.php`
+```php
+<?php
+/* Δημιουργία νέας σύνδεσης */
+$conn = mysqli_connect("localhost", "root", "", "School");
+
+// Attempt select query execution
+$sql = "SELECT * FROM Students";
+
+if($result = mysqli_query($link, $sql))
+{
+  while($row = mysqli_fetch_array($result))
+  {
+    echo 'First name: ' . $row[firstname] . ' ' . 'Last name: ' . $row[lastname] . '<br>';
+  }
+
+} 
+else
+{
+  echo "ERROR: Could not able to execute $sql. " . mysqli_error($link);
+}
+
+// Κλείσιμο σύνδεσης
+mysqli_close($conn);
+```
+
 
 ## Πηγές
 https://www.tutorialrepublic.com/php-tutorial
