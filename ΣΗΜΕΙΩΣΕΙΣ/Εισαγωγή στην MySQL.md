@@ -102,3 +102,8 @@ SELECT * FROM Students;
 ```
 
 ![alt text](https://raw.githubusercontent.com/addboo/programming-PHP/master/%CE%A3%CE%97%CE%9C%CE%95%CE%99%CE%A9%CE%A3%CE%95%CE%99%CE%A3/images/cmd_SELECT.PNG "Command line")
+
+## Διαχείριση της mysql με το phpMyAdmin
+Το phpMyAdmin είναι μια web εφαρμογή η οποία τρέχει στον web server. Εφόσον είναι web εφαρμογή, για την λειτουργία της χρειάζεται να τρέχει στον Η/Υ μας ένας web server (Apache) και ένας MySql server. Το καλύτερο εργαλείο που τα εγκαθιστά αυτόματα όλα αυτά είναι το XAMPP. 
+
+Από τη στιγμή που χρησιμοποιούμε το XAMPP, αυτομάτως έχουν εγκατασταθεί ο web server (Apache) και ο Database Server (mysql) τοπικά στον Η/Υ μας οπότε μέσω του web browser μπορούμε να φορτώσουμε το phpMyAdmin δίνοντας την διεύθυνση localhost/phpmyadmin. 
