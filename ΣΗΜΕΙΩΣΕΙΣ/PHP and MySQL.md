@@ -249,10 +249,10 @@ mysqli_close($conn);
 /* Δημιουργία νέας σύνδεσης */
 $conn = mysqli_connect("localhost", "root", "", "School");
 
-// Attempt select query execution
+// Εκτέλεση του SELECT query.
 $sql = "SELECT * FROM Students";
 
-if($result = mysqli_query($link, $sql))
+if($result = mysqli_query($conn, $sql))
 {
   while($row = mysqli_fetch_array($result))
   {
@@ -269,6 +269,40 @@ else
 mysqli_close($conn);
 ```
 
+### Εμφάνιση όλων των δεδομένων σε πίνακα HTML
+
+```php
+<?php
+/* Δημιουργία νέας σύνδεσης */
+$conn = mysqli_connect("localhost", "root", "", "School");
+
+/ Εκτέλεση του SELECT query
+$sql = "SELECT * FROM persons";
+
+if($result = mysqli_query($conn, $sql))
+{
+  echo "<table>";
+  echo "<tr>";
+    echo "<th>id</th>";
+    echo "<th>first_name</th>";
+    echo "<th>last_name</th>";
+  echo "</tr>";
+
+  while($row = mysqli_fetch_array($result))
+  {
+    echo "<tr>";
+      echo "<td>" . $row['id'] . "</td>";
+      echo "<td>" . $row['firstname'] . "</td>";
+      echo "<td>" . $row['lastname'] . "</td>";
+    echo "</tr>";
+  }
+}
+echo "</table>";
+
+        
+// Κλείσιμο σύνδεσης
+mysqli_close($conn);
+```
 
 ## Πηγές
 https://www.tutorialrepublic.com/php-tutorial
