@@ -4,14 +4,16 @@
 Στο παρακάτω παράδειγμα βλέπουμε πώς μπορούμε να συνδεθούμε στον τοπικό mysql server που τρέχει στο μηχάνημά μας. Ανοίξτε τον αγαπημένο σας editor π.χ. notepad++ και ξεκινήστε να γράφετε κώδικα :) 
 
 *ΠΡΟΣΟΧΗ:*
-Οι κώδικες που γράφουμε στην php για να τους εκτελέσουμε πρέπει να τους αποθηκεύσουμε σε συγκεκριμένο directory για να τους "δει" ο web server και να τους εκτελέσει. Στον XAMPP εξ ορισμού αυτό το directory βρίσκεται στο `C:\XAMPP\htdocs\`. Αν αποθηκεύσουμε εκεί το αρχείο του παρακάτω κώδικα `mysql_connect.php` στο directory `C:\XAMPP\htdocs\`, για να το εκτελέσουμε απο τον web browser πληκτρολογούμε την διεύθυνση: *http://localhost/mysql_connect.php*
+Οι κώδικες που γράφουμε στην php για να τους εκτελέσουμε πρέπει να τους αποθηκεύσουμε σε συγκεκριμένο directory για να τους "δει" ο web server και να τους εκτελέσει. Στον XAMPP εξ ορισμού αυτό το directory βρίσκεται στο `C:\XAMPP\htdocs\`. Αν αποθηκεύσουμε εκεί το αρχείο του παρακάτω κώδικα `mysql_connect.php` στο directory `C:\XAMPP\htdocs\`, για να το εκτελέσουμε απο τον web browser πληκτρολογούμε την διεύθυνση: *http://localhost/mysql_connect.php* ή `http://localhost:8080/mysql_connect.php`. 
+
+Στον παρακάτω κώδικα μην ξεχάσετε να ορίσετε το σωστό username και password (για το xampp είναι username: root, password: κενό).
 
 `Όνομα αρχείου: mysql_connect.php`
 ```php 
 <?php
 $servername = "localhost";
-$username = "username";
-$password = "password";
+$username = "username"; // Δηλώνουμε το username της mysql (δηλώστε root αν το εκτελείτε απο XAMPP)
+$password = "password"; // Δηλώνουμε το password (κενό αν το εκτελείτε απο το XAMPP)
 
 
 // Δημιουργία σύνδεσης
