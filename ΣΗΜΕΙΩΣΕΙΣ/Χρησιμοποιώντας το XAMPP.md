@@ -8,6 +8,30 @@
 ## Βήμα 1: First things first... Download! 
 Επισκεπτόμαστε την σελίδα «https://www.apachefriends.org» η οποία περιλαμβάνει συνδέσμους για να μπορέσουμε να κατεβάσουμε την νεότερη έκδοση του XAMPP. Κάνουμε κλικ όπου αναφέρεται το XAMPP για το λειτουργικό σύστημα που διαθέτουμε. Εμείς κάναμε κλικ στο «XAMPP for Windows».
 
-
+![alt text](https://raw.githubusercontent.com/addboo/programming-PHP/master/%CE%A3%CE%97%CE%9C%CE%95%CE%99%CE%A9%CE%A3%CE%95%CE%99%CE%A3/images/xampp-download.png "XAMPP")
 
 Αφού η μεταφόρτωση του αρχείου εγκατάστασης ολοκληρωθεί, κάνουμε διπλό κλικ επάνω του έτσι ώστε να το εκτελέσουμε. Μας εμφανίζεται το παρακάτω παράθυρο ασφαλείας σχετικά για την εκτέλεση του αρχείου. Κάνουμε κλικ στο «Yes».
+
+![alt text](https://raw.githubusercontent.com/addboo/programming-PHP/master/%CE%A3%CE%97%CE%9C%CE%95%CE%99%CE%A9%CE%A3%CE%95%CE%99%CE%A3/images/01.04-3.2.png "XAMPP")
+
+## Βήμα 2
+
+Η πρώτη οθόνη του οδηγού εγκατάστασης εμφανίζεται, κάνουμε κλικ στο «Next». 
+
+![alt text](https://raw.githubusercontent.com/addboo/programming-PHP/master/%CE%A3%CE%97%CE%9C%CE%95%CE%99%CE%A9%CE%A3%CE%95%CE%99%CE%A3/images/01.04-5.2.png "XAMPP")
+
+## Βήμα 3
+
+Στην παρούσα οθόνη μας εμφανίζονται όλες οι υπηρεσίες που θα εγκατασταθούν. Αφήνουμε τα προεπιλεγμένα επιλεγμένα και ύστερα κάνουμε κλικ στο «Next»
+
+![alt text](https://raw.githubusercontent.com/addboo/programming-PHP/master/%CE%A3%CE%97%CE%9C%CE%95%CE%99%CE%A9%CE%A3%CE%95%CE%99%CE%A3/images/01.04-6.2.png "XAMPP")
+
+## Βήμα 4
+Σε αυτή την οθόνη επιλέγουμε την διαδρομή εγκατάστασης του xampp στον σκληρό μας δίσκο. Το αφήνουμε όπως έχει και κάνουμε κλικ στο «Next»
+
+![alt text](https://raw.githubusercontent.com/addboo/programming-PHP/master/%CE%A3%CE%97%CE%9C%CE%95%CE%99%CE%A9%CE%A3%CE%95%CE%99%CE%A3/images/01.04-7.2.png "XAMPP")
+
+## Βήμα 5
+Μια ενημερωτική οθόνη μας ενημερώνει για το Bitnami, αφαιρούμε το τικ και κάνουμε κλικ στο κουμπί «Next».
+
+![alt text](https://raw.githubusercontent.com/addboo/programming-PHP/master/%CE%A3%CE%97%CE%9C%CE%95%CE%99%CE%A9%CE%A3%CE%95%CE%99%CE%A3/images/01.04-8.2.png "XAMPP")
