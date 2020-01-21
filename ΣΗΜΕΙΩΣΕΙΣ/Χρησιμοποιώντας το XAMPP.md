@@ -59,7 +59,7 @@
 ## Βήμα 10: Όλα στο σωστό σημείο!
 Για να δημιουργήσουμε αρχεία php θα πρέπει να τα τοποθετήσουμε στον κατάλληλο κατάλογο στο σημείο όπου εγκαταστάθηκε το XAMPP. Ο προεπιλεγμένος κατάλογος για να τοποθετήσουμε τα αρχεία php μας είναι ο `C:\xampp\htdocs`. Αν τοποθετήσουμε οτιδήποτε μέσα σε αυτόν τον κατάλογο, τότε θα είναι προσπελάσιμο από τον φυλλομετρητή μας (web browser).
 
-![alt text](https://raw.githubusercontent.com/addboo/programming-PHP/master/%CE%A3%CE%97%CE%9C%CE%95%CE%99%CE%A9%CE%A3%CE%95%CE%99%CE%A3/images/01.04-11.2.png "XAMPP")
+![alt text](https://raw.githubusercontent.com/addboo/programming-PHP/master/%CE%A3%CE%97%CE%9C%CE%95%CE%99%CE%A9%CE%A3%CE%95%CE%99%CE%A3/images/01.04-13.2.png "XAMPP")
 
 ## Βήμα 11: Μια δοκιμή πάντα είναι αναγκαία!
 Δημιουργούμε για επιβεβαίωση έναν φάκελο test με περιεχόμενο του ένα αρχείο κειμένου.
