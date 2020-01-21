@@ -35,3 +35,38 @@
 Μια ενημερωτική οθόνη μας ενημερώνει για το Bitnami, αφαιρούμε το τικ και κάνουμε κλικ στο κουμπί «Next».
 
 ![alt text](https://raw.githubusercontent.com/addboo/programming-PHP/master/%CE%A3%CE%97%CE%9C%CE%95%CE%99%CE%A9%CE%A3%CE%95%CE%99%CE%A3/images/01.04-8.2.png "XAMPP")
+
+## Βήμα 6
+Ενημερωνόμαστε για την ετοιμότητα του οδηγού να εγκαταστήσει το XAMPP στο σύστημα μας. Κάνουμε κλικ στο «Next».
+
+![alt text](https://raw.githubusercontent.com/addboo/programming-PHP/master/%CE%A3%CE%97%CE%9C%CE%95%CE%99%CE%A9%CE%A3%CE%95%CE%99%CE%A3/images/01.04-9.2.png "XAMPP")
+
+## Βήμα 7
+Περιμένουμε να ολοκληρωθεί η διαδικασία εγκατάστασης. Μόλις εμφανιστεί το παράθυρο ολοκλήρωσης κάνουμε κλικ στο  «Finish».
+
+![alt text](https://raw.githubusercontent.com/addboo/programming-PHP/master/%CE%A3%CE%97%CE%9C%CE%95%CE%99%CE%A9%CE%A3%CE%95%CE%99%CE%A3/images/01.04-10.2.png "XAMPP")
+
+## Βήμα 8
+Μας ανοίγει ο πίνακας ελέγχου του XAMPP. Παρατηρούμε πως για κάθε υπηρεσία υπάρχουν αντίστοιχα κουμπιά «Start», «Config», «Logs». Τα κουμπιά «Start» χρησιμοποιούνται έτσι ώστε να ξεκινήσουμε τις αντίστοιχες υπηρεσίες. Αυτές στις οποίες εστιάζουμε σε αυτούς τους οδηγούς είναι η Apache και η MySQL. Αν κάνουμε κλικ στα κουμπιά Start που αφορούν μόνο τις συγκεκριμένες υπηρεσίες τότε το όνομα τους παίρνει ένα πράσινο φόντο το οποίο σημαίνει ότι οι υπηρεσίες ξεκίνησαν επιτυχώς. 
+
+![alt text](https://raw.githubusercontent.com/addboo/programming-PHP/master/%CE%A3%CE%97%CE%9C%CE%95%CE%99%CE%A9%CE%A3%CE%95%CE%99%CE%A3/images/01.04-11.2.png "XAMPP")
+
+## Βήμα 9
+Για επιβεβαίωση επισκεπτόμαστε την διεύθυνση «http://localhost/», και μας φορτώνεται η αρχική σελίδα του εξυπηρετητή μας με το σήμα του XAMPP. 
+
+![alt text](https://raw.githubusercontent.com/addboo/programming-PHP/master/%CE%A3%CE%97%CE%9C%CE%95%CE%99%CE%A9%CE%A3%CE%95%CE%99%CE%A3/images/xampp-startpage.png "XAMPP")
+
+## Βήμα 10
+Για να δημιουργήσουμε αρχεία php θα πρέπει να τα τοποθετήσουμε στον κατάλληλο κατάλογο στο σημείο όπου εγκαταστάθηκε το XAMPP. Ο προεπιλεγμένος κατάλογος για να τοποθετήσουμε τα αρχεία php μας είναι ο «C:\xampp\htdocs». Αν εδώ τοποθετήσουμε το οτιδήποτε μέσα σε αυτόν τον κατάλογο θα είναι προσπελάσιμο από τον φυλλομετρητή μας.
+
+![alt text](https://raw.githubusercontent.com/addboo/programming-PHP/master/%CE%A3%CE%97%CE%9C%CE%95%CE%99%CE%A9%CE%A3%CE%95%CE%99%CE%A3/images/01.04-11.2.png "XAMPP")
+
+## Βήμα 11
+Δημιουργούμε για επιβεβαίωση έναν φάκελο test με περιεχόμενο του ένα αρχείο κειμένου.
+
+![alt text](https://raw.githubusercontent.com/addboo/programming-PHP/master/%CE%A3%CE%97%CE%9C%CE%95%CE%99%CE%A9%CE%A3%CE%95%CE%99%CE%A3/images/01.04-14.2.png "XAMPP")
+
+## Βήμα 12
+Επισκεπτόμαστε την τοποθεσία «http://localhost/test/» από τον φυλλομετρητή μας και βλέπουμε τα περιεχόμενα του φακέλου. Ο εξυπηρετητής μας λειτουργεί κανονικά!
+
+![alt text](https://raw.githubusercontent.com/addboo/programming-PHP/master/%CE%A3%CE%97%CE%9C%CE%95%CE%99%CE%A9%CE%A3%CE%95%CE%99%CE%A3/images/01.04-15.2.png "XAMPP")
