@@ -226,6 +226,7 @@ echo getNegative(15);
  echo add($number1);
 
 ?>
+```
 
 #### Αποτέλεσμα
 
