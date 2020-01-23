@@ -264,4 +264,5 @@ echo "</table>";
 
 Αποτέλεσμα:
 
+![alt text](https://raw.githubusercontent.com/addboo/programming-PHP/master/%CE%A3%CE%97%CE%9C%CE%95%CE%99%CE%A9%CE%A3%CE%95%CE%99%CE%A3/images/arrays_example.png "example")
 
