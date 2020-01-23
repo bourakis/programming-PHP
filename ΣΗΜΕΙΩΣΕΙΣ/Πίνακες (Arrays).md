@@ -70,7 +70,7 @@
 7.  $temp5 = 33;
 8.  $sum = $temp1 + $temp2 + $temp3 + $temp4 + $temp5;
 9.  $average = $sum / 5;
-10. echo “Average temperature: ” . $average;
+10. echo "Average temperature: " . $average;
 ```
 
 Αποτέλεσμα:
@@ -98,7 +98,7 @@
 13. }
 14.
 15. $average = $sum / 5;
-16. echo “Average temperature: ” . $average;
+16. echo "Average temperature: " . $average;
 ```
  
 Αποτέλεσμα:
@@ -191,7 +191,7 @@
 13. }
 14.
 15. //output calculated max
-16. echo “max number is: ” . $max;
+16. echo "max number is: " . $max;
 ```
  
 Αποτέλεσμα:
