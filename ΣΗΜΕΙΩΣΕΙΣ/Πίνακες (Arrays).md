@@ -226,7 +226,7 @@
 $rows = array(
  0 => array(
      'name' => 'Bill',
-     'email' => bill@microsoft.com'
+     'email' => 'bill@microsoft.com'
  ),
  1 => array(
      'name' => 'Steve',
@@ -250,8 +250,8 @@ echo "<table border=1>
 foreach ($rows as $row)
 {
  echo "<tr>";
- echo “<td>” . $row['name'] . "</td>";
- echo "<td>" . $row['email'] . “</td>”;
+ echo "<td>" . $row['name'] . "</td>";
+ echo "<td>" . $row['email'] . "</td>";
  echo "</tr>";
 }
 
