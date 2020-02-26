@@ -200,11 +200,11 @@ if(isset($_POST['save']))
 	$copy_save = $_POST['copy'];
 
 	mysqli_query($conn,"UPDATE example SET Title ='$title_save', Author ='$author_save',
-		                PublisherName ='$name_save',CopyrightYear ='$copy_save' WHERE BookID = '$id'")
+				PublisherName ='$name_save',CopyrightYear ='$copy_save' WHERE BookID = '$id'")
 	or die(mysql_error()); 
-	
-    echo "Saved!";
-	
+
+	echo "Saved!";
+
 	header("Location: index.php");			
 }
 
