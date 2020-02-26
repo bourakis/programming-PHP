@@ -25,16 +25,15 @@ if(!$conn)
 
 ```php
 <?php
-  include("db.php");  
+include("db.php");  
 
-	$id =$_REQUEST['BookID'];
-	
-	
-	// sending query
-	mysqli_query($conn,"DELETE FROM example WHERE BookID = '$id'")
-	or die(mysql_error());  	
-	
-	header("Location: index.php");
+$id = $_REQUEST['BookID'];
+
+// sending query
+mysqli_query($conn, "DELETE FROM example WHERE BookID = '$id'")
+             or die(mysql_error());  	
+
+header("Location: index.php");
 ?>
 ```
 
@@ -98,79 +97,77 @@ INSERT INTO `example` (`BookID`, `Title`, `Author`, `PublisherName`, `CopyrightY
 <!DOCTYPE html>
 <html>
 <head>
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<title>PHP & MYSQL</title>
-
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>PHP & MYSQL</title>
 </head>
 
 <body>
+
 <form method="post">
 <table>
-
-	<tr>
-		<td>Title:</td>
-		<td><input type="text" name="title" class="form-control"/></td>
-	</tr>
-	<tr>
-		<td>Author</td>
-		<td><input type="text" name="author" class="form-control"/></td>
-	</tr>
-	<tr>
-		<td>Publisher Name</td>
-		<td><input type="text" name="name" class="form-control"/></td>
-	</tr>
-	<tr>
-		<td>Copyright Year</td>
-		<td><input type="text" name="copy" class="form-control"/></td>
-	</tr>
-	<tr>
-		<td>&nbsp;</td>
-		<td><input type="submit" name="submit" value="add" class="btn btn-success btn-lg"/></td>
-	</tr>
+<tr>
+    <td>Title:</td>
+    <td><input type="text" name="title" class="form-control"/></td>
+</tr>
+<tr>
+    <td>Author</td>
+    <td><input type="text" name="author" class="form-control"/></td>
+</tr>
+<tr>
+    <td>Publisher Name</td>
+    <td><input type="text" name="name" class="form-control"/></td>
+</tr>
+<tr>
+    <td>Copyright Year</td>
+    <td><input type="text" name="copy" class="form-control"/></td>
+</tr>
+<tr>
+    <td>&nbsp;</td>
+    <td><input type="submit" name="submit" value="add" class="btn btn-success btn-lg"/></td>
+</tr>
 </table>
+
 <?php
 if (isset($_POST['submit']))
-	{	   
-	include 'db.php';
-	
-			 		$title=$_POST['title'] ;
-					$author= $_POST['author'] ;					
-					$name=$_POST['name'] ;
-					$copy=$_POST['copy'] ;
-												
-		 mysqli_query($conn,"INSERT INTO `example`(Title,Author,PublisherName,CopyrightYear) 
-		 VALUES ('$title','$author','$name','$copy')"); 
-				
-				
-	        }
+{	   
+    include 'db.php';
+
+    $title = $_POST['title'] ;
+    $author = $_POST['author'] ;					
+    $name = $_POST['name'] ;
+    $copy = $_POST['copy'] ;
+
+    mysqli_query($conn,"INSERT INTO `example`(Title,Author,PublisherName,CopyrightYear) 
+                        VALUES ('$title','$author','$name','$copy')"); 
+}
 ?>
 </form>
+
 <table border="1">
-	
-			<?php
-			include("db.php");
-			
-				
-			$result= mysqli_query($conn,"SELECT * FROM example");
-			
-			while($test = mysqli_fetch_array($result))
-			{
-				$id = $test['BookID'];	
-				echo "<tr align='center'>";	
-				echo"<td><font color='black'>" .$test['BookID']."</font></td>";
-				echo"<td><font color='black'>" .$test['Title']."</font></td>";
-				echo"<td><font color='black'>". $test['Author']. "</font></td>";
-				echo"<td><font color='black'>". $test['PublisherName']. "</font></td>";
-				echo"<td><font color='black'>". $test['CopyrightYear']. "</font></td>";	
-				echo"<td> <a href ='view.php?BookID=$id'>Edit</a>";
-				echo"<td> <a href ='del.php?BookID=$id'><center>Delete</center></a>";
-									
-				echo "</tr>";
-			}
-			mysql_close($conn);
-			?>
+    <?php
+    include("db.php");
+ 
+    $result = mysqli_query($conn, "SELECT * FROM example");
+
+    while($test = mysqli_fetch_array($result))
+    {
+        $id = $test['BookID'];	
+        echo "<tr align='center'>";	
+        echo"<td><font color='black'>" .$test['BookID']."</font></td>";
+        echo"<td><font color='black'>" .$test['Title']."</font></td>";
+        echo"<td><font color='black'>". $test['Author']. "</font></td>";
+        echo"<td><font color='black'>". $test['PublisherName']. "</font></td>";
+        echo"<td><font color='black'>". $test['CopyrightYear']. "</font></td>";	
+        echo"<td> <a href ='view.php?BookID=$id'>Edit</a>";
+        echo"<td> <a href ='del.php?BookID=$id'><center>Delete</center></a>";
+        echo "</tr>";
+    }
+    mysql_close($conn);
+    ?>
 </table>
+
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js"></script>
+
 </body>
 </html>
 ```
@@ -180,18 +177,20 @@ if (isset($_POST['submit']))
 ```php
 <?php
 require("db.php");
-$id =$_REQUEST['BookID'];
+$id = $_REQUEST['BookID'];
 
 $result = mysqli_query($conn,"SELECT * FROM example WHERE BookID  = '$id'");
 $test = mysqli_fetch_array($result);
+
 if (!$result) 
-		{
-		die("Error: Data not found..");
-		}
-				$Title=$test['Title'] ;
-				$Author= $test['Author'] ;					
-				$PublisherName=$test['PublisherName'] ;
-				$CopyrightYear=$test['CopyrightYear'] ;
+{
+    die("Error: Data not found..");
+}
+
+$Title = $test['Title'] ;
+$Author = $test['Author'] ;					
+$PublisherName = $test['PublisherName'] ;
+$CopyrightYear = $test['CopyrightYear'] ;
 
 if(isset($_POST['save']))
 {	
@@ -201,43 +200,46 @@ if(isset($_POST['save']))
 	$copy_save = $_POST['copy'];
 
 	mysqli_query($conn,"UPDATE example SET Title ='$title_save', Author ='$author_save',
-		 PublisherName ='$name_save',CopyrightYear ='$copy_save' WHERE BookID = '$id'")
-				or die(mysql_error()); 
-	echo "Saved!";
+		                PublisherName ='$name_save',CopyrightYear ='$copy_save' WHERE BookID = '$id'")
+	or die(mysql_error()); 
+	
+    echo "Saved!";
 	
 	header("Location: index.php");			
 }
+
 mysqli_close($conn);
 ?>
+
 <!DOCTYPE html>
 <html>
 <head>
-<title>PHP & MYSQL</title>
+    <title>PHP & MYSQL</title>
 </head>
 
 <body>
 <form method="post">
 <table>
-	<tr>
-		<td>Title:</td>
-		<td><input type="text" name="title" value="<?php echo $Title ?>"/></td>
-	</tr>
-	<tr>
-		<td>Author</td>
-		<td><input type="text" name="author" value="<?php echo $Author ?>"/></td>
-	</tr>
-	<tr>
-		<td>Publisher Name</td>
-		<td><input type="text" name="name" value="<?php echo $PublisherName ?>"/></td>
-	</tr>
-	<tr>
-		<td>Copyright Year</td>
-		<td><input type="text" name="copy" value="<?php echo $CopyrightYear ?>"/></td>
-	</tr>
-	<tr>
-		<td>&nbsp;</td>
-		<td><input type="submit" name="save" value="save" /></td>
-	</tr>
+<tr>
+    <td>Title:</td>
+    <td><input type="text" name="title" value="<?php echo $Title ?>"/></td>
+</tr>
+<tr>
+    <td>Author</td>
+    <td><input type="text" name="author" value="<?php echo $Author ?>"/></td>
+</tr>
+<tr>
+    <td>Publisher Name</td>
+    <td><input type="text" name="name" value="<?php echo $PublisherName ?>"/></td>
+</tr>
+<tr>
+    <td>Copyright Year</td>
+    <td><input type="text" name="copy" value="<?php echo $CopyrightYear ?>"/></td>
+</tr>
+<tr>
+    <td>&nbsp;</td>
+    <td><input type="submit" name="save" value="save" /></td>
+</tr>
 </table>
 
 </body>
