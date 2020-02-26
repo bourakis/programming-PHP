@@ -194,18 +194,18 @@ $CopyrightYear = $test['CopyrightYear'] ;
 
 if(isset($_POST['save']))
 {	
-	$title_save = $_POST['title'];
-	$author_save = $_POST['author'];
-	$name_save = $_POST['name'];
-	$copy_save = $_POST['copy'];
+    $title_save = $_POST['title'];
+    $author_save = $_POST['author'];
+    $name_save = $_POST['name'];
+    $copy_save = $_POST['copy'];
 
-	mysqli_query($conn,"UPDATE example SET Title ='$title_save', Author ='$author_save',
-				PublisherName ='$name_save',CopyrightYear ='$copy_save' WHERE BookID = '$id'")
-	or die(mysql_error()); 
+    mysqli_query($conn,"UPDATE example SET Title ='$title_save', Author ='$author_save',
+                        PublisherName ='$name_save',CopyrightYear ='$copy_save' WHERE BookID = '$id'")
+    or die(mysql_error()); 
 
-	echo "Saved!";
+    echo "Saved!";
 
-	header("Location: index.php");			
+    header("Location: index.php");			
 }
 
 mysqli_close($conn);
