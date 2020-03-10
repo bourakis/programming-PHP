@@ -1,4 +1,4 @@
-# Sessions & Cookies
+# Sessions
 
 ## What is a PHP Session?
 
