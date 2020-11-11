@@ -8,4 +8,35 @@
 Μπορείτε να ανατρέξετε στις σημειώσεις που είναι ανεβασμένες 
 στην 1η εβδομάδα για να θυμηθείτε πώς συντάσσεται ένα table.
 
-<!-- test -->
+<!-- 
+ΛΥΣΗ:
+
+<html>
+<head>
+	<title>Dynamic Table using PHP</title>
+</head>
+<body>
+
+<?php
+$rows = 10;
+$cols = 5;
+
+echo "<table border=\"1\"> \n";
+
+	for ( $i = 1; $i <= $rows; $i++ ) 
+	{ 
+		echo "<tr> \n"; 
+		for ($k=1; $k <= $cols ; $k++) 
+		{ 
+		  	echo "<td>Hello World!</td> \n";
+		}
+		echo "</tr> \n";
+	} 
+	echo '</table>';
+?>
+
+</body>
+</html>
+
+
+-->
