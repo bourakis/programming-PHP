@@ -1,4 +1,7 @@
 <html>
+<head>
+ <title>Προσωπικότητες του 21ου αιώνα</title>
+</head>
 <body>
 
 <?php
