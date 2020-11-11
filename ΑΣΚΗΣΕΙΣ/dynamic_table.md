@@ -9,8 +9,9 @@
 στην 1η εβδομάδα για να θυμηθείτε πώς συντάσσεται ένα table.
 
 <!-- 
-ΛΥΣΗ:
 
+ΛΥΣΗ:
+-----
 <html>
 <head>
 	<title>Dynamic Table using PHP</title>
@@ -37,6 +38,4 @@ echo "<table border=\"1\"> \n";
 
 </body>
 </html>
-
-
 -->
