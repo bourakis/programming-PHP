@@ -6,3 +6,47 @@
 Special hint: Θα χρησιμοποιήσετε την rand() π.χ. για να πάρουμε έναν τυχαίο αριθμό απο το 0 εως το 9 θα συντάξουμε: $r = rand(0,9);
 
 Καλή τύχη! 💪
+
+<!--
+
+<html>
+<head>
+	<title>Slot Machine v2</title>
+</head>
+<body>
+
+<?php
+
+function slotmachine($r1, $r2, $r3)
+{
+
+	echo "<h1>$r1 - $r2 - $r3</h1>";
+
+	if($r1 == 7 && $r2 == 7 && $r3 == 7)
+	{
+		echo "1000!!!";
+	}
+	elseif($r1 == 7 && $r2 == 7 || $r1 == 7 && $r3 == 7 || $r2 == 7 && $r3 == 7)
+	{
+		echo "100";
+	}
+	elseif($r1 == 7 || $r2 == 7 || $r3 == 7)
+	{
+		echo "10";
+	}
+}
+
+
+$r1 = rand(0,9);
+$r2 = rand(0,9);
+$r3 = rand(0,9);
+
+
+slotmachine($r1, $r2, $r3);
+
+
+?>
+
+</body>
+</html>
+-->
