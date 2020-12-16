@@ -6,7 +6,6 @@ $data = array(
 				"Gates"
 			 );
 
-
 //print_r($data);
 echo $data[0][0];
 
