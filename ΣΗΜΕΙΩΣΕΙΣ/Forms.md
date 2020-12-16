@@ -38,3 +38,7 @@ echo 'Your email is: ' . $email;
 
 ?>
 ```
+
+## GET
+
+## POST
