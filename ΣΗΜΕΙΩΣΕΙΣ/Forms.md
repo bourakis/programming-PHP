@@ -7,7 +7,7 @@
 <html>
 <body>
 
-<form action="welcome.php" method="post">
+<form action="welcome.php" method="POST">
     Name: <input type="text" name="name"><br>
     E-mail: <input type="text" name="email"><br>
     <input type="submit">
@@ -29,6 +29,12 @@
 `Όνομα αρχείου: welcome.php`
 ```php
 <?php
+
+$name = $_POST['name'];
+$email = $_POST['email'];
+
+echo 'Your name is : ' . $name . '<br>';
+echo 'Your email is: ' . $email;
 
 ?>
 ```
