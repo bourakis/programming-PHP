@@ -5,7 +5,9 @@ $array = array(
            "key3" => false,
            "key4" => true
          );
-foreach ($array as $value){
+
+foreach ($array as $value)
+{
 	echo $value . "<br>"; 
 }
 
