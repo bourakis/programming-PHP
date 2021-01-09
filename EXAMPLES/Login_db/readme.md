@@ -1,11 +1,17 @@
-## 1. Δημιουργία Login φόρμας (form.php) 
-και μιας Βάσης Δεδομένων με όνομα Shop και έναν πίνακα Accounts με πεδία username, password, fname, lname
+# Login Form
+Δημιουργία φόρμας για Login η οποία θα λαμβάνει τα δεδομένα από την Βάση Δεδομένων. Ο κώδικας είναι δομημένος με τέτοιο τρόπο ώστε να είναι εύκολα επαναχρησιμοποιήσιμος χώρις να χρειάζεται να επαναλαμβάνουμε γραμμές κώδικα. Για αυτό τον λόγο χρησιμοποιούμε την include αλλά έχουμε δημιουργήσει και την login_functions.php στην οποία θα περιέχονται όλες οι συναρτήσεις που χρειαζόμαστε για την διαδικασία του authentication.
 
-## 2. Δημιουργία login_functions.php  
-auth(username, password),  isLoggedIn().
+### 1. Δημιουργία Βάσης Δεδομένων
+Δημιουργία μιας Βάσης Δεδομένων με όνομα Shop και έναν πίνακα Accounts με πεδία username, password, fname, lname
 
-## 3. Δημιουργία index.php 
-στο οποίο εαν είναι συνδεδεμένος ο χρήστης θα του εμφανίζει Hello $username. Εαν δεν είναι συνδεδεμένος θα  εμφανίζεται
-μόνο η login form.
+### 2. Δημιουργία Login φόρμας (form.php) 
+Η φόρμα θα περιέχει τα πεδία username και password.
 
-**Hints:** Sessions, MySql Functions, Functions, includeld!
+### 3. Δημιουργία login_functions.php  
+Σε αυτό το αρχείο υπάρχουν οι συγκεκριμένες συναρτήσεις: boolean auth(username, password), boolean isLoggedIn().
+
+### 4. Δημιουργία index.php 
+Όταν συνδέεται ο χρήστης στην συγκεκριμένη ιστοσελίδα, εαν είναι συνδεδεμένος θα του εμφανίζει `Hello $username`. Εαν δεν είναι συνδεδεμένος θα εμφανίζεται
+η login form.
+
+**Hints:** Sessions, MySql Functions, Functions, include
