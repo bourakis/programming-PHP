@@ -3,4 +3,4 @@
 
 
 <img src="images/mult_table.png">
-![GitHub Logo](images/mult_table.png)
+
