@@ -6,13 +6,30 @@
 <body>
 
 <?php
-function addFunction($num1, $num2) 
+    
+function add_function($num1, $num2) 
 {
     $sum = $num1 + $num2;
-    echo "Sum of the two numbers is : $sum";
+    echo "Sum of the two numbers is: $sum";
+}
+    
+function get_sum($num1, $num2)
+{
+    return $num1 + $num2;
 }
 
-addFunction(10, 20);
+    
+    
+add_function(10, 20);
+
+echo '<br>';
+
+$result = get_sum(3, 6);
+    
+echo 'Sum of the two numbers is:' . $result;
+
+    
+   
 ?>
 
 </body>
