@@ -75,3 +75,55 @@ The following example assigns the content of a text file to a variable then disp
 </html>
 ```
 
+## Γράψιμο αρχείου
+A new file can be written or text can be appended to an existing file using the PHP fwrite() function. This function requires two arguments specifying a file pointer and the string of data that is to be written. Optionally a third integer argument can be included to specify the length of the data to write. If the third argument is included, writing would will stop after the specified length has been reached.
+
+The following example creates a new text file then writes a short text heading inside it. After closing this file its existence is confirmed using file_exist() function which takes file name as an argument
+
+```php 
+<?php
+   $filename = "/home/user/guest/newfile.txt";
+   $file = fopen( $filename, "w" );
+   
+   if( $file == false ) 
+   {
+      echo ( "Error in opening new file" );
+      exit();
+   }
+   fwrite( $file, "This is  a simple test\n" );
+   fclose( $file );
+?>
+
+<html>
+   
+   <head>
+      <title>Writing a file using PHP</title>
+   </head>
+   
+   <body>
+      
+      <?php
+         $filename = "newfile.txt";
+         $file = fopen( $filename, "r" );
+         
+         if( $file == false ) 
+         {
+            echo ( "Error in opening file" );
+            exit();
+         }
+         
+         $filesize = filesize( $filename );
+         $filetext = fread( $file, $filesize );
+         
+         fclose( $file );
+         
+         echo ( "File size : $filesize bytes" );
+         echo ( "$filetext" );
+         echo("file name: $filename");
+      ?>
+      
+   </body>
+</html>
+```
+
+PHP filesystem functions: https://www.tutorialspoint.com/php/php_file_system_functions.htm
