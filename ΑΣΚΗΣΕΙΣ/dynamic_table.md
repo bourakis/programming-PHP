@@ -12,7 +12,7 @@
 
 ΛΥΣΗ:
 -----
-'''html
+```php
 <html>
 <head>
 	<title>Dynamic Table using PHP</title>
@@ -39,4 +39,4 @@ echo "<table border=\"1\"> \n";
 
 </body>
 </html>
-''''
+```
