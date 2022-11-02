@@ -24,7 +24,7 @@ for ( $i = 1; $i <= $rows; $i++ )
 	echo "<tr> \n"; 
 	for ($k=1; $k <= $cols ; $k++) 
 	{ 
-    	$r = $i * $k;
+		$r = $i * $k;
 		echo "<td>$i x $k = $r</td> \n";
 	}
 	echo "</tr> \n";
