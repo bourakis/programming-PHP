@@ -17,7 +17,7 @@
 $rows = 10;
 $cols = 5;
 
-echo "<table border=\"1\"> \n";
+echo "<table border=\"1\">";
 
 for ( $i = 1; $i <= $rows; $i++ ) 
 { 
@@ -25,9 +25,9 @@ for ( $i = 1; $i <= $rows; $i++ )
 	for ($k=1; $k <= $cols ; $k++) 
 	{ 
 		$r = $i * $k;
-		echo "<td>$i x $k = $r</td> \n";
+		echo "<td>$i x $k = $r</td>";
 	}
-	echo "</tr> \n";
+	echo "</tr>";
 } 
 
 echo '</table>';
