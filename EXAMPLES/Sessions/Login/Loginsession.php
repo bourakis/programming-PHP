@@ -8,7 +8,7 @@ session_start();
 <body>
 
   <?php
-  if ($_POST['un']==="bourakis" && $_POST['pw']==="1234")
+  if ($_POST['un'] === "bourakis" && $_POST['pw'] === "1234")
   {
     $_SESSION["un"] = "bourakis";
     $_SESSION["email"] = "bourakis@gmail.com";
