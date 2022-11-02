@@ -4,3 +4,35 @@
 
 <img src="images/mult_table.png">
 
+ΛΥΣΗ:
+-----
+```php
+<html>
+<head>
+	<title>Dynamic Table using PHP</title>
+</head>
+<body>
+
+<?php
+$rows = 10;
+$cols = 5;
+
+echo "<table border=\"1\"> \n";
+
+for ( $i = 1; $i <= $rows; $i++ ) 
+{ 
+	echo "<tr> \n"; 
+	for ($k=1; $k <= $cols ; $k++) 
+	{ 
+    $r = $i * $k;
+		echo "<td>$i x $k = $r</td> \n";
+	}
+	echo "</tr> \n";
+} 
+
+echo '</table>';
+?>
+
+</body>
+</html>
+```
